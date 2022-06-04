@@ -6,7 +6,7 @@
 npm i -g create-react-app
 
 // create app
-create-react-app myapp
+create-react-app myapp                  // npx create-react-app
 
 // start app
 npm start
