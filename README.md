@@ -10,7 +10,7 @@
 ## [props](#props)
 
 ### App.js
-**headerData** oject data passed by _props_ from __App__ to __Header__ by attribute __data={headerData}__
+**headerData** oject data passed by _props_ from __App__ to __Header__ by attr. __data={headerData}__
 ```js
 const headerData = {
   sitename: 'my test site name',
@@ -34,7 +34,7 @@ function App() {
 export default App;
 ```
 ### Header.js
-Из Апп через пропс и аттрибут data в Хедер, далее из Х
+Из __App__ через _props_ (attr. data) в __Header__, далее из Header через _props_ (attr. nv) в __Nav__
 ```js
 function Header(props) {
     return (
