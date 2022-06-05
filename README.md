@@ -2,10 +2,17 @@
 
 | Components  | npm |
 | ------------- | ------------- | 
-| [Create Component](#create-component) | [npm install](#npm-install)
-| [Props](#props) |
+| [Create Component](#create-component) | [npm install](#npm-install)  |
+| [Props](#props)                       |                              |
+| [key](#key)                           |                              |
 
+---
+## [key](#key)
 
+**key={item.link}**
+```js
+const listItem = data.map(item => <li key={item.link}><a href="{item.link}">{item.text}</a></li>)
+```
 ---
 ## [props](#props)
 
