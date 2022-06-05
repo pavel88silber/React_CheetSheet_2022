@@ -3,7 +3,64 @@
 | Components  | npm |
 | ------------- | ------------- | 
 | [Create Component](#create-component) | [npm install](#npm-install)
-| hhhhhhhhhh| jjjjjjjjj |
+| [Props](#props) |
+
+
+---
+## [props](#props)
+
+### App.js
+**headerData** oject data passed by _props_ from __App__ to __Header__ by attribute __data={headerData}__
+```js
+const headerData = {
+  sitename: 'my test site name',
+  second_header: 'Best and very cool',
+  nav: [
+    { "link": "nav1", "text": "my link 1" },
+    { "link": "nav2", "text": "my link 2" },
+    { "link": "nav3", "text": "my link 3" }
+  ]
+}
+
+function App() {
+  return (
+    <>
+        <header className="App-header">
+          <Header data={headerData} />
+        </header>
+    </>
+  );
+}
+export default App;
+```
+### Header.js
+Из Апп через пропс и аттрибут data в Хедер, далее из Х
+```js
+function Header(props) {
+    return (
+        <header>
+            <h2>{props.data.sitename}</h2>
+            <h4>{props.data.second_header}</h4>
+            <Nav nv={props.data.nav} />
+        </header>
+    )
+}
+
+function Nav(props) {
+
+    let data = props.nv
+    const listItem = data.map(item => <li key={item.link}><a href="{item.link}">{item.text}</a></li>)
+    return (
+        <nav>
+            <ul>
+                {listItem}
+            </ul>
+        </nav>
+    )
+}
+export default Header
+```
+
 
 ---
 ## [npm install]
