@@ -67,6 +67,8 @@ function Nav(props) {
 }
 export default Header
 ```
+## [перебор props]
+
 
 
 ---
